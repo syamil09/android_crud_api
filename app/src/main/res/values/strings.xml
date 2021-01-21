@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidApi</string>
+    <array name="teams">
+        <item>Teman</item>
+        <item>Biasa Saja</item>
+        <item>Bagaimana Ya?</item>
+        <item>No Comment</item>
+    </array>
+</resources>
