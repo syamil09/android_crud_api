@@ -56,6 +56,8 @@
             android:paddingStart="15dp"
             tools:targetApi="lollipop"></EditText>
 
+
+
         <Spinner
             android:id="@+id/spKomentar"
             android:layout_width="340dp"
@@ -64,6 +66,21 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/textfield"
             android:entries="@array/teams" />
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="340dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textfield"
+            android:elevation="2dp"
+            android:hint="id"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:visibility="gone"
+            tools:targetApi="lollipop"></EditText>
 
         <Button
             android:id="@+id/btnSave"
@@ -79,17 +96,25 @@
             android:textColor="@android:color/white"
             android:textSize="16dp"></Button>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ListView
+                android:id="@+id/listView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:divider="#eee"
-                android:dividerHeight="1dp"/>
-        </LinearLayout>
+                android:dividerHeight="1dp" />
+            
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
