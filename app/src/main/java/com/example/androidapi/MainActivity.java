@@ -15,6 +15,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -302,11 +303,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //the update and delete textview
             TextView textViewUpdate = listViewItem.findViewById(R.id.txtUpdate);
             TextView textViewDelete = listViewItem.findViewById(R.id.txtDelete);
+            ImageView img = listViewItem.findViewById(R.id.imageView);
+
 
             final Biodata dataku = dataList.get(position);
 
             textViewName.setText(dataku.getNama());
-
+            if (dataku.getKeterangan().equals("Teman")) {
+                img.setImageResource(R.drawable.laugh);
+            } else if(dataku.getKeterangan().equals("Biasa Saja")) {
+                img.setImageResource(R.drawable.celtic);
+            } else if (dataku.getKeterangan().equals("Bagaimana Ya?")) {
+                img.setImageResource(R.drawable.confusion);
+            } else {
+                img.setImageResource(R.drawable.confused);
+            }
             //attaching click listener to update
             textViewUpdate.setOnClickListener(new View.OnClickListener() {
                 @Override
